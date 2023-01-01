@@ -49,10 +49,13 @@ export default function TranslateScreen() {
   return (
     <View style={styles.container}>
       <FlatList
+      horizontal={false}
       data={ movies }
       renderItem = {(itemData)=>{
         return(
-          <View style={{flexDirection:'column'}}>
+          <View style={{flex: 1,
+            flexDirection: 'row',
+            paddingVertical: 13,}}>
             <View style={styles.avatarContainer}> 
               <Image style={styles.imagestyle} source={{uri:itemData.item.image}}></Image>
             </View>
@@ -94,9 +97,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',    
   },
   textstyle:{
-    justifyContent:'space-around',
-    marginLeft:100,
-    marginTop:-70,
+    width:'50%',
+    justifyContent:'center',
+    marginLeft:10,
     flexDirection:'column'
   }
 });
