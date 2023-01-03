@@ -60,10 +60,10 @@ export default function TranslateScreen() {
               <Image style={styles.imagestyle} source={{uri:itemData.item.image}}></Image>
             </View>
            <View style={styles.textstyle}> 
-          <Text>{itemData.item.title}</Text>
-          <Text>{itemData.item.rating}</Text>
-          <Text>{itemData.item.year}</Text>
-          <Text>{itemData.item.genre[0]}</Text>
+          <Text style={{marginTop:15}}><Text style={{color:'red'}}>Movie Name:</Text>{itemData.item.title}</Text>
+          <Text style={{marginTop:15}}><Text style={{color:'red'}}>Rating:</Text>{itemData.item.rating}</Text>
+          <Text style={{marginTop:15}}><Text style={{color:'red'}}>Year:</Text>{itemData.item.year}</Text>
+          <Text style={{marginTop:15}}><Text style={{color:'red'}}>Genre:</Text>{itemData.item.genre[0]}</Text>
           </View>
           </View>
         );
@@ -87,19 +87,24 @@ const styles = StyleSheet.create({
     backgroundColor:'#CCC'
   },
   imagestyle:{
-    height:75,
-    width:75
+    flex:1,
+    width:'100%',
+    height:'100%',
+    resizeMode:'stretch'
   },
   avatarContainer: {        
-    height: 100,
-    width: 100,
+    height: 150,
+    width: '28%',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',    
   },
   textstyle:{
-    width:'50%',
-    justifyContent:'center',
-    marginLeft:10,
+    borderWidth:3,
+    width:'70%',
+    height:'100%',
+    justifyContent:'flex-start',
+    marginTop:0,
+    marginLeft:5,
     flexDirection:'column'
   }
 });
