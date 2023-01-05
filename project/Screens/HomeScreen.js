@@ -27,7 +27,7 @@ const [result,setResult] = useState([]);
 <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
      <View style={styles.container}>
        <TextInput onChangeText={updateText} placeholder='Enter English Word' style={{width:"90%",height:50,borderWidth:3,borderRadius:15,textAlign:'center'}}/>
-     <CustomButton top={35} self={'center'} func = {textToSpeech}/>
+     <CustomButton top={35} self={'center'} func = {textToSpeech} title={"Speak"}/>
      </View>
      </TouchableWithoutFeedback>
   );

@@ -5,7 +5,7 @@ return(
     <View style={[styles.button,{marginTop:props.top,alignSelf:props.self}]}>
       <Pressable style={({pressed}) =>pressed ? [styles.buttoninner,styles.pressed]: styles.buttoninner } android_ripple={{color:'blue'}}onPress={props.func}>
      <Text>
-      Translate
+      {props.title}
      </Text>
      </Pressable>
      </View>

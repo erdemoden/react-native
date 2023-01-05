@@ -46,7 +46,7 @@ const [result,setResult] = useState([]);
      onSubmitEditing={pressHandler}
      returnKeyType="done"
      />
-     <CustomButton func = {pressHandler} top = {-35} self={'flex-end'}/>
+     <CustomButton func = {pressHandler} top = {-35} self={'flex-end'} title={"Translate"}/>
      <Text style={{alignSelf:'center',marginTop:30,fontSize:20,fontWeight:'bold'}}>
       {result.length >0 ? result[0].data.translations[0].translatedText : ""}
      </Text>
