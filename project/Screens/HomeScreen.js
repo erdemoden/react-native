@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import * as Speech from 'expo-speech';
+import { TextInput } from 'react-native-gesture-handler';
 
+function textToSpeech(enteredText){
+
+}
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>Welcome To The Home Screen</Text>
+      <TextInput onChangeText={textToSpeech}/>
       <StatusBar style="auto" />
     </View>
   );
